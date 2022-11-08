@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "0b1c6e4e-5a6c-44f2-888d-5ae960eee478",
+		"name": "springboot-thymeleaf-pdf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2114997"
+	},
+	"item": [
+		{
+			"name": "generate-employee-pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"templateId\": \"1\",\r\n    \"params\": [\r\n        {\r\n            \"key\": \"generatedBy\",\r\n            \"value\": \"SB\"\r\n        },\r\n        {\r\n            \"key\": \"generatedTimestamp\",\r\n            \"value\": \"2022-11-08\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pdfs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pdfs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate-department-pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"templateId\": \"2\",\r\n    \"params\": [\r\n        {\r\n            \"key\": \"lastModifiedBy\",\r\n            \"value\": \"PG\"\r\n        },\r\n        {\r\n            \"key\": \"lastModifiedTimestamp\",\r\n            \"value\": \"2022-11-08\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pdfs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pdfs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
